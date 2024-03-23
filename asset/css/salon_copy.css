@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+:root {
+  /* font基本色 */
+  --font-bk: #333333;
+  --font-head: #72756e;
+  --font-wh: #ffffff;
+
+  /* svg-obj background border */
+  --bg-header: #4d4d4d;
+  --bg-wh: #ffffff;
+  --bg-mark: #c9c8b1;
+  --bg-section: #f9f8f7;
+
+  /* sectionの上下のpadding */
+  --section-pd: 120px;
+}
+
+body {
+  /* 游ゴシックを基本 ---> 游明朝は個別に */
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro",
+    "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+
+  /* iPhone Safari 文字サイズ自動調整機能への対応 */
+  -webkit-text-size-adjust: 100%;
+
+  /* iPhone Safari を除く文字サイズ自動調整機能への対応  */
+  text-size-adjust: 100%;
+
+  /* リンクタップ時のハイライト表示を無色に */
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  /* フォントサイズ */
+  --fs-15px: 0.9375rem;
+  --fs-16px: 1rem;
+  --fs-18px: 1.125rem;
+  --fs-20px: 1.25rem;
+  --fs-22px: 1.375rem;
+  --fs-24px: 1.5rem;
+  --fs-27px: 1.6875rem;
+  --fs-35px: 2.1875rem;
+  --fs-50px: 3.125rem;
+}
+
+h1,
+h2 {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro",
+    "MS P明朝", "MS PMincho", serif;
+}
+
+/* imgタグ共通 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+header .container,
+section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* 仮の線 */
+  border-left: 1px red solid;
+  border-right: 1px red solid;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  background-color: var(--bg-header);
+}
+
+header h1 {
+  margin: 0 0 0 15px;
+  font-size: var(--fs-35px);
+  font-weight: 600;
+  line-height: calc(61.25 / 35);
+  color: var(--font-wh);
+}
+
+/*
+ * MV
+*/
+
+div.mv {
+  position: relative;
+  width: 100%;
+  height: 567px;
+  background: url("/asset/img/mv_1.jpg") no-repeat center bottom / cover;
+}
+
+div.mv h2 {
+  position: absolute;
+  top: 345px;
+  left: 50%;
+  font-size: var(--fs-50px);
+  font-weight: 600;
+  line-height: calc(87.5 / 50);
+  color: var(--font-wh);
+  letter-spacing: calc(200em / 1000);
+  white-space: nowrap;
+  transform: translate(-50%, 0);
+}
+
+div.mv::before {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%);
+  content: "";
+  background-color: var(--bg-section);
+}
+
+div.mv::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  clip-path: polygon(50% 100%, 100% 0%, 100% 100%);
+  content: "";
+  background-color: var(--bg-section);
+}
+
+/*
+ * About section
+*/
+section.about .container {
+  position: relative;
+  padding: calc(114px + 43px) 40px 35px 40px;
+  background-color: var(--bg-section);
+}
+
+section.about .about-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.about .about-contents .text-area {
+  width: calc((438 / 1027) * 100%);
+}
+
+section.about .about-contents .text-area p:first-of-type,
+section.about .about-contents .text-area p:nth-of-type(2) {
+  font-size: var(--fs-27px);
+  line-height: 1;
+  font-feature-settings: "palt";
+}
+
+section.about .about-contents .text-area p:nth-of-type(3) {
+  font-size: var(--fs-18px);
+  line-height: var(31.5/18);
+  font-feature-settings: "palt";
+}
+
+section.about .about-contents .text-area p span {
+  display: inline-block;
+  padding: 0 14px;
+  line-height: calc(35 / 27);
+  white-space: nowrap;
+  background: linear-gradient(
+    transparent 0%,
+    transparent 50%,
+    var(--bg-mark) 50%,
+    var(--bg-mark) 85%,
+    transparent 85%,
+    transparent 100%
+  );
+}
+
+section.about .about-contents .image-area {
+  width: calc((559 / 1027) * 100%);
+}
+
+section.about .about-contents .image-area img {
+  aspect-ratio: 559/357;
+}

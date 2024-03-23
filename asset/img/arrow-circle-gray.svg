@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a4aa9e;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #a4aa9e;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="_応募ボタン" data-name="応募ボタン">
+    <g>
+      <circle class="cls-2" cx="19.5" cy="19.5" r="19"/>
+      <path class="cls-1" d="m14.52,26.39v-1.6s10.25-5.24,10.25-5.24v-.05l-10.25-5.29v-1.6s11.93,6.27,11.93,6.27v1.24s-11.93,6.27-11.93,6.27Z"/>
+    </g>
+  </g>
+</svg>
